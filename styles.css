@@ -1,0 +1,42 @@
+body {
+	margin: 0 auto;
+	width: 1280px;
+	background-color: #fbf9f5;
+}
+
+.header {
+	margin-bottom: 50px;
+}
+
+.navigation-list {
+	text-decoration: none;
+	list-style: none;
+}
+
+.list-link {
+	font-size: 28px;
+}
+
+.navigation-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.title {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.text {
+	font-size: 18px;
+	text-align: center;
+}
+
+.second-section-image {
+	margin: 20px;
+}
+
+.hero-text {
+	text-align: left;
+}
