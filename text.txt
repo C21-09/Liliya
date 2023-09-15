@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Forms</title>
+	<style>
+		form.form-example {
+			display: table;
+			margin: 100px auto 0 auto;
+		}
+
+		div.form-example.form-submit {
+			display: table-row;
+		}
+
+		label,
+		input {
+			display: table-cell;
+			margin-bottom: 10px;
+		}
+
+		label {
+			font-size: 18px;
+			padding-right: 10px;
+		}
+
+		.form-submit {
+			text-align: center;
+		}
+
+		.submit {
+			padding: 10px;
+			border: none;
+			border-radius: 10px;
+			background-color: rgb(115, 115, 242);
+			font-size: 18px;
+			font-weight: 800;
+			color: #ffffff;
+		}
+
+		.input-st {
+			border: 2px solid black;
+			background-color: antiquewhite;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<form name="form" action="javascript:completeAndRedirect();" method="get" class="form-example">
+		<div class="name form-example">
+			<label for="name">
+				Enter your name:
+			</label>
+			<input class="input-st" type="text" name="name" id="name" required>
+		</div>
+		<div class="surname form-example">
+			<label for="surname">
+				Enter your surname:
+			</label>
+			<input class="input-st" type="text" name="surname" id="surname" required>
+		</div>
+		<div class="email form-example">
+			<label for="email">
+				Enter your email:
+			</label>
+			<input class="input-st" type="email" name="email" id="email" required>
+		</div>
+		<div class="password form-example">
+			<label for="password">
+				Enter your password:
+			</label>
+			<input class="input-st" type="password" name="password" id="password" required>
+		</div>
+		<div class="form-submit">
+			<input class="submit" type="submit" value="Send">
+		</div>
+	</form>
+
+	<p id="text"></p>
+
+	<script>
+		function completeAndRedirect() {
+			var form = document.forms['form'];
+			text.innerHTML = "The data you provided: <br> Your name: " + form.elements.name.value + "<br> Your surname: " + form.elements.surname.value + "<br> Your Email: " + form.elements.email.value + "<br> Your Password: " + form.elements.password.value;
+		}
+	</script>
+</body>
+
+</html>
